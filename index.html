@@ -12,7 +12,7 @@
 <body>
     <div class="bdy">
     <div class="writeup">
-        <h1>Calculate your body mass index(BMI)</h1>
+        <h1>Calculate your body mass index (BMI)</h1>
         <h3>Instructions:-</h3>
         <p>For you to calculate your BMI you need to input ur data(weight & height) correctly.</p>
         <h3>BMI categories:-</h3>
@@ -22,8 +22,16 @@
                 Overweight = 25 - 29.9 <br>
                 Obesity = BMI of 30 or greater
         </p>
+        
     </div>
+
     <div class="calculator">
+        
+        
+        <div id="standard" >
+        <button id="caltype" onclick="calculateStandard()">Standard</button> 
+        <button id="caltype" onclick="calculateMetrics()">Metrics</button>
+        
         <p><b>BMI Calculator</b></p>
         <p>Enter data using standard measurements</p>
         <form>
@@ -33,7 +41,7 @@
             <label for="weight">Your Weight:</label>
             <input type="number" name="Weight" id="weight" placeholder="pounds" value=""><br>
             <br>
-            <button type="button" id="computebtn" onclick="computeBMI()">Compute BMI</button>
+            <button type="button" id="computebtn" onclick="computeStandard()">Compute BMI</button>
             <button type="button" id="computebtn" onclick="reload()">Clear</button>
 
         </form>
@@ -42,7 +50,33 @@
             <p id="result" style="font-size: 20px;"> </p>
             <p id="condition" style="font-size: 10px;"></p>
         </div>
+        </div>
+
+        <div id="metrics" style="display: none;">
+            <button id="caltype" onclick="calculateStandard()">Standard</button> 
+            <button id="caltype" onclick="calculateMetrics()">Metrics</button>
+            
+            <p><b>BMI Calculator</b></p>
+            <p>Enter data using metrics measurements</p>
+            <form>
+                <label for="height"> Your Height:</label>
+                <input type="number" name="Height" id="height" placeholder="centimeters" value=""><br>
+                <br>
+                <label for="weight">Your Weight:</label>
+                <input type="number" name="Weight" id="weight" placeholder="kilograms" value=""><br>
+                <br>
+                <button type="button" id="computebtn" onclick="computeMetric()">Compute BMI</button>
+                <button type="button" id="computebtn" onclick="reload()">Clear</button>
+    
+            </form>
+            <div>
+                <p id="heading" style="font-size: 30px;"> </p>
+                <p id="result" style="font-size: 20px;"> </p>
+                <p id="condition" style="font-size: 10px;"></p>
+            </div>
+        </div>
     </div>
+    
     </div>
     <div>
         <p>&copy;<a href="https://github.com/sirGentlejack"> gentlejackB </a> 2023</p>

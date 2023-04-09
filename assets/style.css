@@ -24,6 +24,23 @@ input{
     margin-right: 5px;
 }
 
+#caltype{
+    border: none;
+    background-color: beige;
+    color: inherit;
+    cursor: pointer;
+}
+
+#caltype:focus{
+    border-bottom: 3px solid chocolate;
+}
+
+#caltype:hover{
+    border-bottom: 3px solid chocolate;
+}
+
+
+
 .calculator{
     width: 50%;
     border: 2px solid chocolate;
@@ -34,6 +51,8 @@ input{
     border-radius: 10px;
     margin-left: 5px;
 }
+
+
 #computebtn{
     border: none;
     padding: 10px 30px;
@@ -54,5 +73,14 @@ a{
 
     .writeup{
         margin-bottom: 50px;
+        width: 80%;
+    }
+    .calculator{
+        width: 80%;
+    }
+}
+@media screen and (max-width:250px) {
+    input{
+        width: 50vw;
     }
 }
